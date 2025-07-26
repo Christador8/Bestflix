@@ -15,22 +15,6 @@ import { ToastContainer } from 'react-toastify';
  * AppRoutes is rendered *inside* BrowserRouter, so useNavigate will work properly here.
  */
 function AppRoutes() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      // Add a short delay to ensure Router is initialized
-      setTimeout(() => {
-        if (user) {
-          console.log("User is signed in:", user);
-          navigate('/');
-        } else {
-          console.log("No user is signed in.");
-          navigate('/login');
-        }
-      }, 0);
-    });
-
     return () => unsubscribe();
   }, [navigate]);
 
