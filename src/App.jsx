@@ -15,9 +15,6 @@ import { ToastContainer } from 'react-toastify';
  * AppRoutes is rendered *inside* BrowserRouter, so useNavigate will work properly here.
  */
 function AppRoutes() {
-    return () => unsubscribe();
-  }, [navigate]);
-
   return (
     <>
       <Navbar />
